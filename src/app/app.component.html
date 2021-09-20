@@ -1,0 +1,33 @@
+<form>
+  <label>
+    Time now:
+    <input name="timeNow" type="text" [(ngModel)]="timeNow" disabled required />
+  </label>
+  <br /><br />
+  <label>
+    Working time now:
+    <input name="workTimeNow" type="text" [(ngModel)]="workTimeNow" required />
+  </label>
+  <br /><br />
+  <label>
+    Working time total:
+    <input
+      name="workTimeTotal"
+      type="text"
+      [(ngModel)]="workTimeTotal"
+      required
+    />
+  </label>
+  <br /><br />
+  <button name="submit" (click)="calculate($event)">Calculate</button>
+</form>
+<br /><br />
+<label>
+  Time till the end:
+  <input name="timeTillEnd" type="text" [(ngModel)]="timeTillEnd" disabled />
+</label>
+<br /><br />
+<label>
+  You can go home at:
+  <input name="timeToGoHome" type="text" [(ngModel)]="timeToGoHome" disabled />
+</label>
