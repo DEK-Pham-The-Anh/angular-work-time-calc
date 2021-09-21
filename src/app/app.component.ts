@@ -11,7 +11,7 @@ export class AppComponent {
   timeNow: string = '';
   workTimeNow: string = '00:00:00';
   workTimeTotal: string = '08:00:00';
-  formErrors = [];
+  formErrors = {};
 
   /**
    * Converts 'h:m:s' time to seconds
@@ -50,22 +50,28 @@ export class AppComponent {
   };
 
   prepare = () => {
-    this.formErrors = [];
+    this.formErrors = {
+      0: null,
+      1: null
+    };
+    let errorCount = 0;
     const workTimeNowValidated = this.validateTime(this.workTimeNow);
     if (workTimeNowValidated) {
       this.workTimeNow = workTimeNowValidated;
     } else {
-      this.formErrors.push("Invalid 'Work Time Now'");
+      this.formErrors[0] = "Invalid 'Work Time Now'";
+      errorCount++;
     }
 
     const workTimeTotalValidated = this.validateTime(this.workTimeTotal);
     if (workTimeTotalValidated) {
       this.workTimeTotal = workTimeTotalValidated;
     } else {
-      this.formErrors.push("Invalid 'Work Time Total'");
+      this.formErrors[1] = "Invalid 'Work Time Total'";
+      errorCount++;
     }
 
-    if (this.formErrors.length === 0) {
+    if (errorCount === 0) {
       return true;
     }
 
