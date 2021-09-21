@@ -1,1 +1,9 @@
-/* Add application styles & imports to this file! */
+label {
+    display: inline-block;
+}
+.formError {
+    padding: 10px 10px 0 10px;
+    color: red;
+    font-style: italic;
+    text-align: right;
+}

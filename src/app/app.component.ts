@@ -50,6 +50,7 @@ export class AppComponent {
   };
 
   prepare = () => {
+    this.formErrors = [];
     const workTimeNowValidated = this.validateTime(this.workTimeNow);
     if (workTimeNowValidated) {
       this.workTimeNow = workTimeNowValidated;
@@ -68,6 +69,7 @@ export class AppComponent {
       return true;
     }
 
+    console.log('Errors', this.formErrors);
     return false;
   };
 

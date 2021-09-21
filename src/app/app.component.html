@@ -7,6 +7,7 @@
   <label>
     Working time now:
     <input name="workTimeNow" type="text" [(ngModel)]="workTimeNow" required />
+    <div class="formError">{{ formErrors[0] }}</div>
   </label>
   <br /><br />
   <label>
@@ -17,6 +18,7 @@
       [(ngModel)]="workTimeTotal"
       required
     />
+    <div class="formError">{{ formErrors[1] }}</div>
   </label>
   <br /><br />
   <button name="submit" (click)="calculate($event)">Calculate</button>
