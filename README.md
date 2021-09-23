@@ -31,7 +31,7 @@ ng build --prod --baseHref="https://_YOUR_GITHUB_NAME_IN_LOWER_CASE_.github.io/_
 3. Commit and push changes to GitHub. In repository settings, set `/docs` as the folder from which the app will be built for your GitHub Page.
 
 
-## Solutions to possible issues
+## Solutions to potential issues
 
 1. https://www.codegrepper.com/code-examples/javascript/angular+cli+version+is+greater+than+your+local+version
 2. https://stackoverflow.com/questions/57216110/the-angular-compiler-requires-typescript-3-4-0-and-3-5-0-but-3-5-3-was-found
