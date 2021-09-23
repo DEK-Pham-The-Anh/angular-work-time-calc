@@ -21,11 +21,13 @@ https://dek-pham-the-anh.github.io/angular-work-time-calc/
         "outputPath": "docs",
 ```
 This sets directory `/docs` as the folder into which you can put your built app files   
+
 2. Build your app for deployment on GitHub pages:
 ```
 ng build --prod --baseHref="https://_YOUR_GITHUB_NAME_IN_LOWER_CASE_.github.io/_YOUR_REPO_NAME_/"
 ```
 *Example: ng build --prod --baseHref="https://dek-pham-the-anh.github.io/angular-work-time-calc/"* 
+
 3. Commit and push changes to GitHub. In repository settings, set `/docs` as the folder from which the app will be built for your GitHub Page.
 
 
